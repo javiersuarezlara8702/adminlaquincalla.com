@@ -1,2 +1,7 @@
-# adminlaquincalla.com
-Esta app es la administracion de laquincalla.com apk
+# ADMININSUMOSLAQUINCALLA
+
+A new Flutter project.
+
+## Getting Started
+
+FlutterFlow projects are built to run on the Flutter _stable_ release.
