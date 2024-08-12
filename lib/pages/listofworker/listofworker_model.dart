@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 class ListofworkerModel extends FlutterFlowModel<ListofworkerWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -22,7 +21,6 @@ class ListofworkerModel extends FlutterFlowModel<ListofworkerWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
   }

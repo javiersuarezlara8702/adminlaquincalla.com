@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 class UpdateproductCopyModel extends FlutterFlowModel<UpdateproductCopyWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
@@ -34,7 +33,6 @@ class UpdateproductCopyModel extends FlutterFlowModel<UpdateproductCopyWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 

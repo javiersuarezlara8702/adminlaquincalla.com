@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 class CreatenewProductModel extends FlutterFlowModel<CreatenewProductWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -42,7 +41,6 @@ class CreatenewProductModel extends FlutterFlowModel<CreatenewProductWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 

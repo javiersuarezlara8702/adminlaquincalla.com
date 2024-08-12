@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class GestoresRegisterModel extends FlutterFlowModel<GestoresRegisterWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -23,7 +22,6 @@ class GestoresRegisterModel extends FlutterFlowModel<GestoresRegisterWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
   }

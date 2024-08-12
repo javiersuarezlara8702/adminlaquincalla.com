@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class OrderDetailsModel extends FlutterFlowModel<OrderDetailsWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Stores action output result for [Backend Call - Update Row(s)] action in Button widget.
   List<OrderRow>? statuspay;
   // Stores action output result for [Backend Call - Update Row(s)] action in Button widget.
@@ -24,7 +23,5 @@ class OrderDetailsModel extends FlutterFlowModel<OrderDetailsWidget> {
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 }

@@ -9,7 +9,6 @@ class ProductsByCategoryModel
     extends FlutterFlowModel<ProductsByCategoryWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   Completer<List<ProductsRow>>? requestCompleter;
   // Models for boolean dynamic component.
   late FlutterFlowDynamicModels<BooleanModel> booleanModels;
@@ -21,7 +20,6 @@ class ProductsByCategoryModel
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     booleanModels.dispose();
   }
 

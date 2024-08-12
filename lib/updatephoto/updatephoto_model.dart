@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class UpdatephotoModel extends FlutterFlowModel<UpdatephotoWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -19,7 +18,5 @@ class UpdatephotoModel extends FlutterFlowModel<UpdatephotoWidget> {
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    unfocusNode.dispose();
-  }
+  void dispose() {}
 }

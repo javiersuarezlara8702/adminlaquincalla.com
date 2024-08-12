@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class OrdersSearchModel extends FlutterFlowModel<OrdersSearchWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -19,7 +18,6 @@ class OrdersSearchModel extends FlutterFlowModel<OrdersSearchWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
   }

@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class CreateNewworkerModel extends FlutterFlowModel<CreateNewworkerWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   bool isDataUploading = false;
   FFUploadedFile uploadedLocalFile =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -64,7 +63,6 @@ class CreateNewworkerModel extends FlutterFlowModel<CreateNewworkerWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 

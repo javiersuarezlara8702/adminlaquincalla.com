@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 class SearchProductModel extends FlutterFlowModel<SearchProductWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   Completer<ApiCallResponse>? apiRequestCompleter;
   // Models for booleanCopy dynamic component.
   late FlutterFlowDynamicModels<BooleanCopyModel> booleanCopyModels;
@@ -20,7 +19,6 @@ class SearchProductModel extends FlutterFlowModel<SearchProductWidget> {
 
   @override
   void dispose() {
-    unfocusNode.dispose();
     booleanCopyModels.dispose();
   }
 
