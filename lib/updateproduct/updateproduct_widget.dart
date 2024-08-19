@@ -56,6 +56,13 @@ class _UpdateproductWidgetState extends State<UpdateproductWidget> {
       '0',
     ));
     _model.textFieldFocusNode4 ??= FocusNode();
+
+    _model.textController5 ??= TextEditingController(
+        text: valueOrDefault<String>(
+      widget.products?.description,
+      '0',
+    ));
+    _model.textFieldFocusNode5 ??= FocusNode();
   }
 
   @override
@@ -450,6 +457,60 @@ class _UpdateproductWidgetState extends State<UpdateproductWidget> {
                         _model.textController4Validator.asValidator(context),
                   ),
                 ),
+                Padding(
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 15.0, 16.0),
+                  child: TextFormField(
+                    controller: _model.textController5,
+                    focusNode: _model.textFieldFocusNode5,
+                    autofocus: false,
+                    obscureText: false,
+                    decoration: InputDecoration(
+                      labelText: 'ingrese Precio de Comision',
+                      hintText: 'ingrese nuevo Precio',
+                      hintStyle:
+                          FlutterFlowTheme.of(context).bodyLarge.override(
+                                fontFamily: 'Readex Pro',
+                                letterSpacing: 0.0,
+                              ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0x00000000),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      errorBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0x00000000),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Color(0x00000000),
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Readex Pro',
+                          letterSpacing: 0.0,
+                        ),
+                    maxLines: 3,
+                    validator:
+                        _model.textController5Validator.asValidator(context),
+                  ),
+                ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -496,6 +557,7 @@ class _UpdateproductWidgetState extends State<UpdateproductWidget> {
                           'name': _model.textController1.text,
                           'Precio_comision':
                               int.tryParse(_model.textController4.text),
+                          'description': _model.textController5.text,
                         },
                         matchingRows: (rows) => rows.eq(
                           'id',

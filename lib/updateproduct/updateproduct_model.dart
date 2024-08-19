@@ -28,6 +28,10 @@ class UpdateproductModel extends FlutterFlowModel<UpdateproductWidget> {
   FocusNode? textFieldFocusNode4;
   TextEditingController? textController4;
   String? Function(BuildContext, String?)? textController4Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode5;
+  TextEditingController? textController5;
+  String? Function(BuildContext, String?)? textController5Validator;
   // Model for booleanCopy component.
   late BooleanCopyModel booleanCopyModel;
   // Stores action output result for [Backend Call - Update Row(s)] action in Button widget.
@@ -52,6 +56,9 @@ class UpdateproductModel extends FlutterFlowModel<UpdateproductWidget> {
 
     textFieldFocusNode4?.dispose();
     textController4?.dispose();
+
+    textFieldFocusNode5?.dispose();
+    textController5?.dispose();
 
     booleanCopyModel.dispose();
   }
